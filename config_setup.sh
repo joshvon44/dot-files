@@ -11,3 +11,5 @@ ln -s $(pwd)/helix ~/.config/helix
 ln -s $(pwd)/vimrc ~/.vimrc
 
 ln -s $(pwd)/alacritty ~/.config/alacritty
+
+ln -s $(pwd)/nvim ~/.config/nvim
