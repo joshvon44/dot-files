@@ -1,4 +1,5 @@
 return {
+    { "tpope/vim-sleuth" },
     {
         "kylechui/nvim-surround",
         init = function()

@@ -22,6 +22,9 @@ return {
 
             -- Rust LSP
             require('lspconfig').rust_analyzer.setup({})
+
+            -- C LSP
+            require('lspconfig').clangd.setup({})
         end,
     },
     {'neovim/nvim-lspconfig'},
