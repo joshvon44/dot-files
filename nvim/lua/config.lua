@@ -26,6 +26,10 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
+-- Keymapping to go back a tab
+vim.keymap.set('n', 'gp', '<cmd>tabprev<cr>')
+vim.keymap.set('n', 'gT', '<cmd>tabe<cr>')
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 --vim.api.nvim_create_autocmd('LspAttach', {
