@@ -17,7 +17,7 @@ return {
                     buffer = bufnr,
                     preserve_mappings = false
                 })
-                vim.keymap.set({'n', 'x'}, 'gq', function()
+                vim.keymap.set({'n', 'x'}, '<F3>', function()
                     vim.lsp.buf.format({async = false, timeout_ms = 10000})
                 end, opts)
             end)
