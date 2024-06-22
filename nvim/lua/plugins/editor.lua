@@ -1,6 +1,8 @@
 return {
     -- Auto adjusting indentation
     { "tpope/vim-sleuth" },
+    -- Get block indentation lines
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
     -- Surround highlighted text 
     {
         "kylechui/nvim-surround",
@@ -41,12 +43,14 @@ return {
             end,
         }
     },
+    -- Gives keymaps to easily comment out blocks of code
     {
         'numToStr/Comment.nvim',
         init = function()
             require('Comment').setup()
         end
     },
+    -- Highlight TODO comments and easily search for them
     {
       "folke/todo-comments.nvim",
       dependencies = { "nvim-lua/plenary.nvim" },
