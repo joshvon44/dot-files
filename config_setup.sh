@@ -13,3 +13,6 @@ ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/alacritty ~/.config/alacritty
 
 ln -s $(pwd)/nvim ~/.config/nvim
+
+systemctl --user start ssh-agent
+systemctl --user enable ssh-agent
