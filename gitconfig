@@ -1,0 +1,44 @@
+[user]
+[core]
+	editor = nvim
+    excludesfile = /home/joshua/.gitignore
+[init]
+    defaultBranch = master
+[branch]
+    sort = -committerdate
+[user]
+	name = Joshua VonSeggern
+	email = joshvon44@gmail.com
+[color]
+    ui = auto
+[fetch]
+    prune = true
+[push]
+    default = tracking
+    autoSetupRemove = true
+    followTags = true
+[color "grep"]
+    filename = magenta
+    lineNumber = green
+    match = red
+[grep]
+    lineNumber = true
+[alias]
+    graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+    orig-author = "!oa() { while read parm; do echo -n \"$parm: \"; git log --full-history --format='%C(white)%an%Creset' $GIT_PREFIX$parm | tail -1; done; }; oa"
+    top = rev-parse --show-toplevel
+    grepall = "!f() { list=`git submodule -q foreach pwd`; for r in . $list; do ( cd $r; git --no-pager grep --color=always \"$@\" | perl -pe \"s|^(\\x1b\\[0-9;]*m){0,1}|\\1$r/|\"; ); done }; f"
+[pull]
+    ff = only
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[commit]
+    verbose = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
