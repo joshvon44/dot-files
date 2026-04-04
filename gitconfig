@@ -28,6 +28,7 @@
     orig-author = "!oa() { while read parm; do echo -n \"$parm: \"; git log --full-history --format='%C(white)%an%Creset' $GIT_PREFIX$parm | tail -1; done; }; oa"
     top = rev-parse --show-toplevel
     grepall = "!f() { list=`git submodule -q foreach pwd`; for r in . $list; do ( cd $r; git --no-pager grep --color=always \"$@\" | perl -pe \"s|^(\\x1b\\[0-9;]*m){0,1}|\\1$r/|\"; ); done }; f"
+    lo = log --oneline
 [pull]
     ff = only
 [diff]
